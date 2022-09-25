@@ -1,0 +1,116 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;500;700&display=swap');
+ */
+ @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  /* background-image: url(./Assets/images/background.png); */
+  /* background-color: #24292e; */
+  position: relative;
+  /* font-family: 'Oswald', sans-serif; */
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  scroll-behavior: smooth;
+  min-height: 100%;
+}
+
+canvas {
+  display: block;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 70%;
+}
+.list-items-phone {
+  @apply z-10 fixed -top-0 -right-2 p-3 w-[70vw] h-screen shadow-2xl md:hidden list-none
+  flex flex-col justify-start items-end rounded-md text-white bg-primary
+}
+
+.button-style {
+  @apply bg-primary py-2 px-5 rounded-md text-white uppercase transition duration-150 ease-in-out hover:scale-110 w-[100px]
+}
+.button-style-mob {
+  @apply bg-white py-2 px-5 rounded-md text-primary uppercase transition duration-150 ease-in-out hover:scale-110 w-[120px] mx-auto
+}
+.grid-system {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-6
+}
+
+.card-features {
+  @apply rounded-[50px] shadow-primaryShadow md:h-[600px] text-center bg-white flex flex-col justify-center items-center p-12
+}
+
+.team-card {
+  @apply flex flex-col justify-center items-center bg-[#786cf6] rounded-[2rem] p-5
+}
+.team-card-details {
+  @apply bg-white p-5 rounded-2xl text-center relative flex justify-center items-center mb-5  md:mb-10
+}
+
+.roadmap-after {
+  position: relative;
+  color: white;
+}
+
+.roadmap-after::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 1px;
+  padding: 2px;
+  right: 10px;
+  top: 1px;
+  background-color: #af3045;
+}
+@media (max-width:667px) {
+  .roadmap-after::after {
+    right: -10px;
+  }
+}
+
+.roadmap-before {
+  position: relative;
+  color: white;
+}
+
+.roadmap-before::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 1px;
+  padding: 2px;
+  left: 0px;
+  top: 1px;
+  background-color: #af3045;
+}
+
+.icon-title {
+  position: relative;
+}
+.icon-title::after {
+  content: '';
+  width: 100px;
+  height: 4px;
+  border: 20px;
+  /* background-color: #af3045; */
+  position: absolute;
+  left: 50px;
+  top: 20px;
+}
+
+.icon-title::before {
+  content: '';
+  width: 100px;
+  height: 4px;
+  border: 20px;
+  /* background-color: #af3045; */
+  position: absolute;
+  right: 50px;
+  top: 20px;
+}
